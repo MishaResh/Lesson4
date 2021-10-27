@@ -8,3 +8,19 @@
 # Например, в первом задании выводим целые числа, начиная с 3, а при достижении числа 10 завершаем цикл.
 # Во втором также необходимо предусмотреть условие, при котором повторение элементов списка будет прекращено.
 
+from itertools import count
+from itertools import cycle
+from random import randint
+
+my_list = [randint(0, 30) for i in range(5)]
+for x in count(3):
+    if x > 10:
+        break
+    else:
+        print(x)
+c = 0
+for y in cycle(my_list):
+    if c > 10:
+        break
+    print(y)
+    c += 1
